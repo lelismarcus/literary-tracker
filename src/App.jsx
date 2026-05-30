@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const fontLink = document.createElement("link");
 fontLink.rel = "stylesheet";
@@ -288,13 +288,24 @@ function BookForm({initial,projects,onSave,onDelete,onCancel}) {
   );
 }
 
+function loadFromStorage(key, fallback) {
+  try {
+    const saved = localStorage.getItem(key);
+    return saved ? JSON.parse(saved) : fallback;
+  } catch { return fallback; }
+}
+
 export default function App() {
-  const [books,setBooks]=useState(ERA_VITORIANA_BOOKS);
-  const [projects,setProjects]=useState(INITIAL_PROJECTS);
-  const [activeId,setActiveId]=useState("p1");
+  const [books,setBooks]=useState(()=>loadFromStorage("ml_books", ERA_VITORIANA_BOOKS));
+  const [projects,setProjects]=useState(()=>loadFromStorage("ml_projects", INITIAL_PROJECTS));
+  const [activeId,setActiveId]=useState(()=>loadFromStorage("ml_activeId", "p1"));
   const [view,setView]=useState("home");
   const [editingBook,setEditingBook]=useState(null);
   const [projOpen,setProjOpen]=useState(false);
+
+  useEffect(()=>{ try { localStorage.setItem("ml_books", JSON.stringify(books)); } catch {} },[books]);
+  useEffect(()=>{ try { localStorage.setItem("ml_projects", JSON.stringify(projects)); } catch {} },[projects]);
+  useEffect(()=>{ try { localStorage.setItem("ml_activeId", activeId); } catch {} },[activeId]);
 
   const activeProj=projects.find(p=>p.id===activeId)||projects[0];
   const projBooks=books.filter(b=>activeProj.livros.includes(b.id));
