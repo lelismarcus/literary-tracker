@@ -126,6 +126,7 @@ function BookCard({livro,projeto,todos,onEdit,onUpdateProgress,onAddComment,onRa
   const [loadingCtx,setLoadingCtx]=useState(false);
   const [showComment,setShowComment]=useState(false);
   const [commentText,setCommentText]=useState("");
+  const [editingRating,setEditingRating]=useState(false);
   const col=periodColor(livro.periodo);
   const p=pct(livro);
 
@@ -159,7 +160,7 @@ function BookCard({livro,projeto,todos,onEdit,onUpdateProgress,onAddComment,onRa
             </div>
             <div style={{fontSize:17,fontWeight:700,color:C.text,lineHeight:1.25,marginBottom:3}}>{livro.titulo}</div>
             <div style={{fontSize:13,color:C.textMid}}>{livro.autor} · {livro.ano}</div>
-            {livro.avaliacao&&<div style={{marginTop:4}}><StarRating avaliacao={livro.avaliacao} readonly={true}/></div>}
+            {livro.avaliacao&&<div style={{marginTop:4,cursor:"pointer"}} onClick={()=>setEditingRating(e=>!e)}><StarRating avaliacao={livro.avaliacao} readonly={true}/></div>}
           </div>
           <div style={{display:"flex",gap:6,marginLeft:10,flexShrink:0}}>
             <button onClick={()=>onEdit(livro)} style={iconBtn} title="Editar"><Icons.Edit/></button>
@@ -170,13 +171,13 @@ function BookCard({livro,projeto,todos,onEdit,onUpdateProgress,onAddComment,onRa
         {pct(livro)>=100&&!livro.avaliacao&&(
           <div style={{marginTop:12,padding:"10px 12px",background:C.opalDim,borderRadius:10,border:`1px solid ${C.opal}44`}}>
             <div style={{fontSize:12,color:C.opal,fontWeight:600,marginBottom:8}}>Avalie sua leitura</div>
-            <StarRating avaliacao={livro.avaliacao} onRate={n=>onRate(livro.id,n)}/>
+            <StarRating avaliacao={livro.avaliacao} onRate={n=>{onRate(livro.id,n);}}/>
           </div>
         )}
-        {pct(livro)>=100&&livro.avaliacao&&(
-          <div style={{marginTop:8,display:"flex",alignItems:"center",gap:6}}>
-            <StarRating avaliacao={livro.avaliacao} onRate={n=>onRate(livro.id,n)} readonly={false}/>
-            <span style={{fontSize:11,color:C.textSoft}}>toque para alterar</span>
+        {livro.avaliacao&&editingRating&&(
+          <div style={{marginTop:8,padding:"10px 12px",background:C.opalDim,borderRadius:10,border:`1px solid ${C.opal}44`}}>
+            <div style={{fontSize:12,color:C.opal,fontWeight:600,marginBottom:8}}>Alterar avaliação</div>
+            <StarRating avaliacao={livro.avaliacao} onRate={n=>{onRate(livro.id,n);setEditingRating(false);}}/>
           </div>
         )}
       </div>
