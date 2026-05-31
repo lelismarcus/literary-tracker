@@ -28,18 +28,18 @@ function periodColor(p) {
 
 const ERA_VITORIANA_BOOKS = [
   { id:"b1",  titulo:"Os Mistérios de Udolfo",        autor:"Ann Radcliffe",    ano:"1794", periodo:"Romantismo Gótico",                       resumo:"Matriz do romance gótico inglês. Estabelece a arquitetura que as Brontë herdarão e subverterão: a mansão isolada, o segredo enterrado, a mulher ameaçada.", ebook:false, paginas:672, progresso:0,   comentarios:[] },
-  { id:"b2",  titulo:"Frankenstein",                   autor:"Mary Shelley",     ano:"1818", periodo:"Romantismo Gótico",                       resumo:"Escrito no núcleo do Romantismo, excede seu tempo: antecipa a ficção científica e critica o otimismo iluminista.", ebook:false, paginas:280, progresso:0, comentarios:[] },
-  { id:"b3",  titulo:"Razão e Sensibilidade",          autor:"Jane Austen",      ano:"1811", periodo:"Pré-realismo / Neoclassicismo tardio",     resumo:"Austen antecipa o realismo antes do Romantismo vitoriano. Ironia social precisa, linguagem controlada, casamento como problema filosófico.", ebook:false, paginas:374, progresso:0, comentarios:[] },
-  { id:"b4",  titulo:"Emma",                           autor:"Jane Austen",      ano:"1815", periodo:"Pré-realismo / Neoclassicismo tardio",     resumo:"Ponto alto da ironia austeniana. Emma Woodhouse é uma das personagens mais complexas da literatura inglesa.", ebook:false, paginas:474, progresso:0, comentarios:[] },
-  { id:"b5",  titulo:"O Morro dos Ventos Uivantes",   autor:"Emily Brontë",     ano:"1847", periodo:"Romantismo tardio / Transição",            resumo:"O caos emocional vence a contenção formal. É o romance mais próximo do Romantismo gótico — a emoção como força bruta que recusa qualquer domesticação.", ebook:false, paginas:348, progresso:100, comentarios:[] },
-  { id:"b6",  titulo:"Jane Eyre",                     autor:"Charlotte Brontë", ano:"1847", periodo:"Romantismo tardio / Transição",            resumo:"No limiar entre Romantismo e Realismo. Romantismo com esqueleto proto-realista. A voz em primeira pessoa inaugura uma nova subjetividade feminina.", ebook:false, paginas:532, progresso:100, comentarios:[] },
-  { id:"b7",  titulo:"A Inquilina de Wildfell Hall",  autor:"Anne Brontë",      ano:"1848", periodo:"Transição / Proto-realismo",               resumo:"A mais realista das três Brontë. O trauma estrutura a voz. Anne é a única que critica o herói byroniano em vez de romantizá-lo.", ebook:false, paginas:490, progresso:45, comentarios:[] },
-  { id:"b8",  titulo:"David Copperfield",             autor:"Charles Dickens",  ano:"1850", periodo:"Realismo vitoriano",                       resumo:"O bildungsroman realista por excelência. A subjetividade embedada no social e histórico — infância traumática, trabalho infantil, mobilidade social.", ebook:false, paginas:882, progresso:0, comentarios:[] },
-  { id:"b9",  titulo:"O Moinho no Floss",             autor:"George Eliot",     ano:"1860", periodo:"Realismo vitoriano",                       resumo:"Mais próximo emocionalmente das Brontë. Maggie Tulliver tem o ímpeto de Jane Eyre mas vive num mundo que Eliot recusa a transfigurar romanticamente.", ebook:false, paginas:520, progresso:0, comentarios:[] },
-  { id:"b10", titulo:"Middlemarch",                   autor:"George Eliot",     ano:"1871", periodo:"Realismo vitoriano",                       resumo:"O ponto mais alto do realismo vitoriano. Eliot examina com rigor filosófico as limitações que a sociedade impõe ao indivíduo.", ebook:false, paginas:904, progresso:0, comentarios:[] },
-  { id:"b11", titulo:"Longe da Multidão Enlouquecida",autor:"Thomas Hardy",     ano:"1874", periodo:"Realismo tardio / Proto-naturalismo",      resumo:"O campo inglês destruído pela industrialização. O realismo começa a escurecer — o determinismo social e biológico começa a pesar.", ebook:false, paginas:418, progresso:0, comentarios:[] },
-  { id:"b12", titulo:"Tess of the d'Urbervilles",     autor:"Thomas Hardy",     ano:"1891", periodo:"Naturalismo vitoriano",                    resumo:"O indivíduo contra forças sem rosto. O otimismo vitoriano está definitivamente extinto neste romance implacável.", ebook:false, paginas:448, progresso:0, comentarios:[] },
-  { id:"b13", titulo:"O Retrato de Dorian Gray",      autor:"Oscar Wilde",      ano:"1890", periodo:"Estetismo / Decadentismo",                 resumo:"Contraponto direto ao realismo. Wilde declara que a arte não deve nada à moral. Resposta sofisticada à seriedade moral de Eliot e Dickens.", ebook:false, paginas:254, progresso:0, comentarios:[] },
+  { id:"b2",  titulo:"Frankenstein",                   autor:"Mary Shelley",     ano:"1818", periodo:"Romantismo Gótico",                       resumo:"Escrito no núcleo do Romantismo, excede seu tempo: antecipa a ficção científica e critica o otimismo iluminista.", ebook:false, paginas:280, avaliacao:null, progresso:0, comentarios:[] },
+  { id:"b3",  titulo:"Razão e Sensibilidade",          autor:"Jane Austen",      ano:"1811", periodo:"Pré-realismo / Neoclassicismo tardio",     resumo:"Austen antecipa o realismo antes do Romantismo vitoriano. Ironia social precisa, linguagem controlada, casamento como problema filosófico.", ebook:false, paginas:374, avaliacao:null, progresso:0, comentarios:[] },
+  { id:"b4",  titulo:"Emma",                           autor:"Jane Austen",      ano:"1815", periodo:"Pré-realismo / Neoclassicismo tardio",     resumo:"Ponto alto da ironia austeniana. Emma Woodhouse é uma das personagens mais complexas da literatura inglesa.", ebook:false, paginas:474, avaliacao:null, progresso:0, comentarios:[] },
+  { id:"b5",  titulo:"O Morro dos Ventos Uivantes",   autor:"Emily Brontë",     ano:"1847", periodo:"Romantismo tardio / Transição",            resumo:"O caos emocional vence a contenção formal. É o romance mais próximo do Romantismo gótico — a emoção como força bruta que recusa qualquer domesticação.", ebook:false, paginas:348, progresso:100, avaliacao:null, comentarios:[] },
+  { id:"b6",  titulo:"Jane Eyre",                     autor:"Charlotte Brontë", ano:"1847", periodo:"Romantismo tardio / Transição",            resumo:"No limiar entre Romantismo e Realismo. Romantismo com esqueleto proto-realista. A voz em primeira pessoa inaugura uma nova subjetividade feminina.", ebook:false, paginas:532, progresso:100, avaliacao:null, comentarios:[] },
+  { id:"b7",  titulo:"A Inquilina de Wildfell Hall",  autor:"Anne Brontë",      ano:"1848", periodo:"Transição / Proto-realismo",               resumo:"A mais realista das três Brontë. O trauma estrutura a voz. Anne é a única que critica o herói byroniano em vez de romantizá-lo.", ebook:false, paginas:490, avaliacao:null, progresso:45, comentarios:[] },
+  { id:"b8",  titulo:"David Copperfield",             autor:"Charles Dickens",  ano:"1850", periodo:"Realismo vitoriano",                       resumo:"O bildungsroman realista por excelência. A subjetividade embedada no social e histórico — infância traumática, trabalho infantil, mobilidade social.", ebook:false, paginas:882, avaliacao:null, progresso:0, comentarios:[] },
+  { id:"b9",  titulo:"O Moinho no Floss",             autor:"George Eliot",     ano:"1860", periodo:"Realismo vitoriano",                       resumo:"Mais próximo emocionalmente das Brontë. Maggie Tulliver tem o ímpeto de Jane Eyre mas vive num mundo que Eliot recusa a transfigurar romanticamente.", ebook:false, paginas:520, avaliacao:null, progresso:0, comentarios:[] },
+  { id:"b10", titulo:"Middlemarch",                   autor:"George Eliot",     ano:"1871", periodo:"Realismo vitoriano",                       resumo:"O ponto mais alto do realismo vitoriano. Eliot examina com rigor filosófico as limitações que a sociedade impõe ao indivíduo.", ebook:false, paginas:904, avaliacao:null, progresso:0, comentarios:[] },
+  { id:"b11", titulo:"Longe da Multidão Enlouquecida",autor:"Thomas Hardy",     ano:"1874", periodo:"Realismo tardio / Proto-naturalismo",      resumo:"O campo inglês destruído pela industrialização. O realismo começa a escurecer — o determinismo social e biológico começa a pesar.", ebook:false, paginas:418, avaliacao:null, progresso:0, comentarios:[] },
+  { id:"b12", titulo:"Tess of the d'Urbervilles",     autor:"Thomas Hardy",     ano:"1891", periodo:"Naturalismo vitoriano",                    resumo:"O indivíduo contra forças sem rosto. O otimismo vitoriano está definitivamente extinto neste romance implacável.", ebook:false, paginas:448, avaliacao:null, progresso:0, comentarios:[] },
+  { id:"b13", titulo:"O Retrato de Dorian Gray",      autor:"Oscar Wilde",      ano:"1890", periodo:"Estetismo / Decadentismo",                 resumo:"Contraponto direto ao realismo. Wilde declara que a arte não deve nada à moral. Resposta sofisticada à seriedade moral de Eliot e Dickens.", ebook:false, paginas:254, avaliacao:null, progresso:0, comentarios:[] },
 ];
 
 const INITIAL_PROJECTS = [
@@ -120,7 +120,7 @@ function ProgressBar({livro,onChange}) {
   );
 }
 
-function BookCard({livro,projeto,todos,onEdit,onUpdateProgress,onAddComment}) {
+function BookCard({livro,projeto,todos,onEdit,onUpdateProgress,onAddComment,onRate}) {
   const [expanded,setExpanded]=useState(false);
   const [ctx,setCtx]=useState(null);
   const [loadingCtx,setLoadingCtx]=useState(false);
@@ -159,6 +159,7 @@ function BookCard({livro,projeto,todos,onEdit,onUpdateProgress,onAddComment}) {
             </div>
             <div style={{fontSize:17,fontWeight:700,color:C.text,lineHeight:1.25,marginBottom:3}}>{livro.titulo}</div>
             <div style={{fontSize:13,color:C.textMid}}>{livro.autor} · {livro.ano}</div>
+            {livro.avaliacao&&<div style={{marginTop:4}}><StarRating avaliacao={livro.avaliacao} readonly={true}/></div>}
           </div>
           <div style={{display:"flex",gap:6,marginLeft:10,flexShrink:0}}>
             <button onClick={()=>onEdit(livro)} style={iconBtn} title="Editar"><Icons.Edit/></button>
@@ -166,6 +167,18 @@ function BookCard({livro,projeto,todos,onEdit,onUpdateProgress,onAddComment}) {
           </div>
         </div>
         <ProgressBar livro={livro} onChange={d=>onUpdateProgress(livro.id,d)}/>
+        {pct(livro)>=100&&!livro.avaliacao&&(
+          <div style={{marginTop:12,padding:"10px 12px",background:C.opalDim,borderRadius:10,border:`1px solid ${C.opal}44`}}>
+            <div style={{fontSize:12,color:C.opal,fontWeight:600,marginBottom:8}}>Avalie sua leitura</div>
+            <StarRating avaliacao={livro.avaliacao} onRate={n=>onRate(livro.id,n)}/>
+          </div>
+        )}
+        {pct(livro)>=100&&livro.avaliacao&&(
+          <div style={{marginTop:8,display:"flex",alignItems:"center",gap:6}}>
+            <StarRating avaliacao={livro.avaliacao} onRate={n=>onRate(livro.id,n)} readonly={false}/>
+            <span style={{fontSize:11,color:C.textSoft}}>toque para alterar</span>
+          </div>
+        )}
       </div>
 
       <button onClick={toggleCtx} style={{width:"100%",padding:"10px 16px",background:C.surface,border:"none",borderTop:`1px solid ${C.border}`,display:"flex",justifyContent:"space-between",alignItems:"center",color:C.textSoft,fontSize:12,fontWeight:600,letterSpacing:"0.05em"}}>
@@ -202,6 +215,25 @@ function BookCard({livro,projeto,todos,onEdit,onUpdateProgress,onAddComment}) {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+
+function StarRating({avaliacao, onRate, readonly=false}) {
+  const [hover, setHover] = useState(null);
+  return (
+    <div style={{display:"flex",alignItems:"center",gap:3}}>
+      {[1,2,3,4,5].map(n=>(
+        <span key={n}
+          onClick={()=>!readonly&&onRate&&onRate(n===avaliacao?null:n)}
+          onMouseEnter={()=>!readonly&&setHover(n)}
+          onMouseLeave={()=>!readonly&&setHover(null)}
+          style={{fontSize:readonly?16:22,cursor:readonly?"default":"pointer",lineHeight:1,
+            color:(hover||avaliacao)>=n?"#F5C518":"#3A3A40",transition:"color 0.1s"}}>
+          ★
+        </span>
+      ))}
     </div>
   );
 }
@@ -317,6 +349,7 @@ export default function App() {
 
   function updateProgress(id,delta){setBooks(bs=>bs.map(b=>{if(b.id!==id)return b;const max=b.ebook?100:b.paginas;return{...b,progresso:Math.max(0,Math.min(b.progresso+delta,max))};}));}
   function addComment(id,texto){setBooks(bs=>bs.map(b=>b.id!==id?b:{...b,comentarios:[...(b.comentarios||[]),{texto,data:new Date().toLocaleDateString("pt-BR")}]}));}
+  function rateBook(id,avaliacao){setBooks(bs=>bs.map(b=>b.id!==id?b:{...b,avaliacao}));}
 
   function handleSave(livro,newProjData) {
     let pid=livro.projetoId||"outros";
@@ -367,13 +400,13 @@ export default function App() {
             {lendo.length>0&&(
               <div style={{marginBottom:6}}>
                 <SectionLabel color={C.lendo}>Em leitura</SectionLabel>
-                {lendo.map(b=><BookCard key={b.id} livro={b} projeto={activeProj} todos={projBooks} onEdit={l=>{setEditingBook({...l,projetoId:activeId});setView("form");}} onUpdateProgress={updateProgress} onAddComment={addComment}/>)}
+                {lendo.map(b=><BookCard key={b.id} livro={b} projeto={activeProj} todos={projBooks} onEdit={l=>{setEditingBook({...l,projetoId:activeId});setView("form");}} onUpdateProgress={updateProgress} onAddComment={addComment} onRate={rateBook}/>)}
               </div>
             )}
             {periodGroups.map(([periodo,livros])=>(
               <div key={periodo} style={{marginBottom:6}}>
                 <SectionLabel color={periodColor(periodo)}>{periodo}</SectionLabel>
-                {livros.map(b=><BookCard key={b.id} livro={b} projeto={activeProj} todos={projBooks} onEdit={l=>{setEditingBook({...l,projetoId:activeId});setView("form");}} onUpdateProgress={updateProgress} onAddComment={addComment}/>)}
+                {livros.map(b=><BookCard key={b.id} livro={b} projeto={activeProj} todos={projBooks} onEdit={l=>{setEditingBook({...l,projetoId:activeId});setView("form");}} onUpdateProgress={updateProgress} onAddComment={addComment} onRate={rateBook}/>)}
               </div>
             ))}
             {projBooks.length===0&&(
